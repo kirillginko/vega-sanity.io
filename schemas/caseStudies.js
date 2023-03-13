@@ -1,6 +1,6 @@
 export default {
   name: 'caseStudies',
-  title: 'caseStudies',
+  title: 'Case Studies',
   type: 'document',
   fields: [
     {

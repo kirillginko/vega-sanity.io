@@ -1,5 +1,6 @@
 export default {
   name: 'song',
+  title: 'Music Player',
   type: 'document',
   fields: [
     {
