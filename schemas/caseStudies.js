@@ -12,9 +12,24 @@ export default {
     },
     {
       name: 'header',
-      title: 'Header',
+      title: 'Case Study Header',
+      type: 'string',
+      validation: (Rule) => Rule.max(20).warning('The header should not exceed 64 characters.'),
+    },
+    {
+      name: 'title',
+      title: 'Title',
       type: 'string',
     },
+	{
+		name: 'services',
+		title: 'Services',
+		type: 'array',
+		of: [{ type: 'string' }],
+		options: {
+			layout: 'tags',
+		},
+	},
     {
       name: 'image',
       title: 'Thumbnail Image',
