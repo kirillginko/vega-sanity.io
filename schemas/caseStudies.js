@@ -73,12 +73,20 @@ export default {
         },
       ],
     },
-    {
-      name: 'imagesGallery',
-      title: 'Image Gallery',
-      type: 'array',
-      of: [{type: 'image'}],
-    },
+{
+	name: 'imagesGallery',
+	title: 'Image Gallery',
+	type: 'array',
+	description: 'Add images to the gallery. Gifs must be 800W x 600H',
+	of: [
+		{
+			type: 'image',
+			options: {
+				hotspot: true,
+			},
+		},
+	],
+},
     {
       name: 'body2',
       title: 'Body2',
