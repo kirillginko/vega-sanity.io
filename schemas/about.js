@@ -50,12 +50,48 @@ export default {
 				},
 			],
 		},
-		// {
-		// 	name: 'imagesGallery2',
-		// 	title: 'Image Gallery 2',
-		// 	type: 'array',
-		// 	of: [{type: 'image'}],
-		// },
+		{
+			name: 'skill1',
+			title: 'Skill 1',
+			type: 'object',
+			fields: [
+				{ name: 'title', type: 'string', title: 'Title' },
+				{ name: 'list', type: 'array', title: 'List', of: [{type: 'string'}] },
+			],
+		},
+		{
+			name: 'skill2',
+			title: 'Skill 2',
+			type: 'object',
+			fields: [
+				{ name: 'title', type: 'string', title: 'Title' },
+				{ name: 'list', type: 'array', title: 'List', of: [{type: 'string'}] },
+			],
+		},
+		{
+			name: 'skill3',
+			title: 'Skill 3',
+			type: 'object',
+			fields: [
+				{ name: 'title', type: 'string', title: 'Title' },
+				{ name: 'list', type: 'array', title: 'List', of: [{type: 'string'}] },
+			],
+		},
+		{
+			name: 'imagesGallery2',
+			title: 'Image Gallery 2',
+			type: 'array',
+			of: [
+				{
+					type: 'object',
+					fields: [
+						{ name: 'image', type: 'image', title: 'Image' },
+						{ name: 'name', type: 'string', title: 'Name' },
+						{ name: 'title', type: 'string', title: 'Title' }
+					]
+				}
+			],
+		},
 		// {
 		// 	name: 'body2',
 		// 	title: 'Body2',
