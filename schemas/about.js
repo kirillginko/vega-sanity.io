@@ -11,8 +11,7 @@ export default {
 		{
 			name: 'logo',
 			title: 'Logo',
-			type: 'array',
-			of: [{type: 'image'}],
+			type: 'image',
 		},
 		{
 			name: 'imagesGallery',

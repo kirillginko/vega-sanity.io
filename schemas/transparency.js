@@ -13,9 +13,9 @@ export default {
 		title: 'Image',
 		type: 'image',
 		options: {
-			hotspot: true,
-		  },
-	   },
+		  hotspot: true,
+		},
+	  },
 	  {
 		name: 'body',
 		title: 'Body',
@@ -48,12 +48,30 @@ export default {
 		title: 'Image Gallery',
 		type: 'array',
 		of: [{ type: 'image' }]
-	   },
-	   {
-		name: 'videoUrl',
-		title: 'Video URL',
-		type: 'url',
-		description: 'Add a link to a video to be displayed.'
+	  },
+	  {
+		name: 'videos',
+		title: 'Videos',
+		type: 'array',
+		of: [
+		  {
+			type: 'object',
+			fields: [
+			  {
+				name: 'videoUrl',
+				title: 'Video URL',
+				type: 'url',
+				description: 'Add a link to a video to be displayed.',
+			  },
+			  {
+				name: 'thumbnail',
+				title: 'Thumbnail',
+				type: 'image',
+				description: 'Add a thumbnail image for the video.',
+			  },
+			],
+		  },
+		],
 	  },
 	  {
 		name: 'body2',
@@ -84,6 +102,3 @@ export default {
 	  },
 	],
   };
-  
-
-  
