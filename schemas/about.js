@@ -15,9 +15,14 @@ export default {
 		},
 		{
 			name: 'imagesGallery',
-			title: 'Image Gallery',
+			title: 'Clients Gallery',
 			type: 'array',
-			of: [{type: 'image'}],
+			of: [
+				{
+				  type: 'image',
+				  options: { hotspot: true },
+				},
+			],
 		},
 		{
 			name: 'body',
@@ -84,7 +89,7 @@ export default {
 				{
 					type: 'object',
 					fields: [
-						{ name: 'image', type: 'image', title: 'Image' },
+						{ name: 'image', type: 'image', title: 'Image', options: { hotspot: true },},
 						{ name: 'name', type: 'string', title: 'Name' },
 						{ name: 'title', type: 'string', title: 'Title' }
 					]
