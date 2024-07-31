@@ -11,7 +11,10 @@ export default {
 		{
 			name: 'logo',
 			title: 'Logo',
-			type: 'image',
+			type: 'file',
+			options: {
+			  accept: 'video/webm, video/mp4'
+			},
 		},
 		{
 			name: 'imagesGallery',
