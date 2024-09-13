@@ -76,17 +76,8 @@ export default {
 	  },
 	  {
 		name: 'portrait',
-		title: 'Portrait Image',
-		type: 'image',
-		options: {
-		  hotspot: true,
-		},
-	  },
-	  {
-		name: 'imageGallery1',
-		title: 'Image Gallery 1',
+		title: 'Portrait Image or Video',
 		type: 'array',
-		description: 'Add images to the gallery.',
 		of: [
 		  {
 			type: 'image',
@@ -94,8 +85,36 @@ export default {
 			  hotspot: true,
 			},
 		  },
+		  {
+			type: 'file',
+			title: 'Video File',
+			options: {
+			  accept: 'video/*',  // Allows all video formats
+			},
+		  },
 		],
-		validation: (Rule) => Rule.max(5).error('Maximum of 5 images allowed.'),
+	  },	  
+	  {
+		name: 'imageGallery1',
+		title: 'Image Gallery 1',
+		type: 'array',
+		description: 'Add images and videos to the gallery.',
+		of: [
+		  {
+			type: 'image',
+			options: {
+			  hotspot: true,
+			},
+		  },
+		  {
+			type: 'file',  
+			title: 'Video File',
+			options: {
+			  accept: 'video/*',  // Add specific formats like MOV
+			},
+		  }
+		],
+		validation: (Rule) => Rule.max(5).error('Maximum of 5 files (images or videos) allowed.'),
 	  },
 	],
 	orderings: [
