@@ -1,6 +1,6 @@
 export default {
-	name: 'transparency',
-	title: 'Transparency',
+	name: 'Gen-Synth',
+	title: 'Gen-Synth',
 	type: 'document',
 	fields: [
 	  {
@@ -8,14 +8,14 @@ export default {
 		title: 'Header',
 		type: 'string',
 	  },
-	  {
-		name: 'image',
-		title: 'Image',
-		type: 'image',
-		options: {
-		  hotspot: true,
-		},
-	  },
+	//   { currently unused
+	// 	name: 'image',
+	// 	title: 'Image',
+	// 	type: 'image',
+	// 	options: {
+	// 	  hotspot: true,
+	// 	},
+	//   },
 	  {
 		name: 'body',
 		title: 'Body',
@@ -59,9 +59,15 @@ export default {
 			fields: [
 			  {
 				name: 'videoUrl',
-				title: 'Video URL',
+				title: 'Video URL (for embedded videos)',
 				type: 'url',
-				description: 'Add a link to a video to be displayed.',
+				description: 'Add a link to a video to be embedded directly on the page.',
+			  },
+			  {
+				name: 'videoLink',
+				title: 'Video Link (for external videos)',
+				type: 'url',
+				description: 'Add a link to an external video page (e.g., YouTube, Vimeo).',
 			  },
 			  {
 				name: 'thumbnail',
